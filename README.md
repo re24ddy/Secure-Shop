@@ -15,8 +15,8 @@ This project demonstrates the implementation of a complete CI/CD pipeline using 
 -   **SonarQube**: Continuous code quality and security analysis
 -   **GitHub**: Cloud-based hosting service for Git repositories
 -   **Nexus Artifact Repository**: Stores and distributes artifacts (e.g., libraries, dependencies)
--   **Amazon Elastic Container Registry (ECR)**: Fully-managed Docker container registry
--    **Amazon EKS:**    Container Orchestration Service (Elastic Kubernetes Service)
+-   **Docker**: Fully-managed Docker container registry
+-    **Azure AKS:**    Container Orchestration Service (Azure Kubernetes Service)
 -   **Kubernetes**: Container orchestration platform for deployment
 
 **Tools and server Configuration**
