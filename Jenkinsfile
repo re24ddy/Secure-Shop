@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Git Checkout') {
             steps {
-                git branch: 'main', url: https://github.com/re24ddy/Secure-Shop.git'
+                git branch: 'main', url: 'https://github.com/re24ddy/Secure-Shop.git'
             }
         }
         
