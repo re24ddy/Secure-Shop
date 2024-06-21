@@ -1,4 +1,3 @@
-
 package com.reljicd;
 
 import org.junit.Test;
