@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Git Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/re24ddy/Ekart.git'
+                git branch: 'main', url: https://github.com/re24ddy/Secure-Shop.git'
             }
         }
         
@@ -40,8 +40,8 @@ pipeline {
         stage("Sonarqube Analysis"){
             steps{
                 withSonarQubeEnv('sonar-server') {
-                    sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=EKART \
-                    -Dsonar.projectKey=EKART \
+                    sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=shoppingcart \
+                    -Dsonar.projectKey=shoppingcart \
                     -Dsonar.exclusions=**/*.java
                     '''
                 }
@@ -85,7 +85,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'DockerHubPass', toolName: 'docker') {
-                        sh "docker build -t shopping-cart -f docker/Dockerfile ."
+                        sh "docker build -t shopping-cart -f Dockerfile ."
                         sh "docker tag  shopping-cart harish117/shopping-cart:latest"
                         
                     }
